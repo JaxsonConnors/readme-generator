@@ -18,7 +18,7 @@ const generateLicense = licenseText => {
 
   return `
     ### **License**
-
+    ___
     ${licenseText}
   `;
 };
@@ -30,7 +30,7 @@ const generateContributing = contributingText => {
 
   return `
     ### **Contributing**
-
+    ___
     ${contributingText}
   `;
 };
@@ -42,7 +42,7 @@ const generateTests = testsText => {
 
   return `
     ### **Tests**
-
+    ___
     ${testsText}
   `;
 };
@@ -54,54 +54,61 @@ const generateQuestions = questionsText => {
 
   return `
     ### **Questions**
-
+    ___
     ${questionsText}
   `;
 };
 
 const generateTableOfContents = () => {
-  if (!questionsText) {
+  if (confirmTableOfContents === true) {
+
+    return `
+    ### **Table Of Contents**
+    ___
+    * Installation(#Installation)
+    * Usage(#Usage)
+    `;
+    if (confirmLicense === true) {
+      return `* License(#License)`;
+    }
+  
+    if (confirmContributing === true) {
+      return `* Contributing(#Contributing)`;
+    }
+  
+    if (confirmTests === true) {
+      return `* Tests(#Tests)`;
+    }
+  
+    if (confirmQuestions === true) {
+      return `* Questions(#Questions)`;
+    }
+    
+  } else {
     return '';
-  }
-
-  return `
-  ### **Table Of Contents**
-
-  * Installation#1
-  * Usage#2
-  `;
-  if (confirmLicense === true) {
-    return `* License#3`;
-  }
-
-  if (confirmContributing === true) {
-    return `* Contributing#4`;
-  }
-
-  if (confirmTests === true) {
-    return `* Tests#5`;
-  }
-
-  if (confirmQuestions === true) {
-    return `* Questions#6`;
   }
 
 };
 
 function generateMarkdown(data) {
   return `# **${data.title}**
-  ### **Description**
+  ___
 
+  ### **Description**
+  ___
   ${data.description}
 
 
-  ### **Installation**#1
+  ${generateTableOfContents}
 
+
+  ### **Installation**
+  ___
   ${data.installation}
 
 
-  ### **Usage**#2
-
+  ### **Usage**
+  ___
   ${data.usage}
 
 

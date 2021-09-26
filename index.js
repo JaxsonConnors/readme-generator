@@ -9,8 +9,8 @@ const promptUser = () => {
       type: 'input',
       name: 'title',
       message: 'What is the title of your application?',
-      validate: githubInput => {
-        if (githubInput) {
+      validate: titleInput => {
+        if (titleInput) {
           return true;
         } else {
           console.log('Please enter your application title!');
@@ -22,8 +22,8 @@ const promptUser = () => {
       type: 'input',
       name: 'description',
       message: 'Please give a detailed description of your application',
-      validate: githubInput => {
-        if (githubInput) {
+      validate: descriptionInput => {
+        if (descriptionInput) {
           return true;
         } else {
           console.log('Please enter a description for your application!');
@@ -35,11 +35,11 @@ const promptUser = () => {
       type: 'input',
       name: 'installation',
       message: 'Please give a detailed description for installing your application',
-      validate: githubInput => {
-        if (githubInput) {
+      validate: installationInput => {
+        if (installationInput) {
           return true;
         } else {
-          console.log('Please enter a description for your application!');
+          console.log('Please enter a description for installing your application!');
           return false;
         }
       }
@@ -47,12 +47,12 @@ const promptUser = () => {
     {
       type: 'input',
       name: 'usage',
-      message: 'Please give a detailed description for using your application',
-      validate: githubInput => {
-        if (githubInput) {
+      message: 'Please give a detailed description for the usage of your application',
+      validate: usageInput => {
+        if (usageInput) {
           return true;
         } else {
-          console.log('Please enter a description for using your application!');
+          console.log('Please enter a description for the usage of your application!');
           return false;
         }
       }
@@ -66,7 +66,7 @@ const promptUser = () => {
     {
       type: 'input',
       name: 'license',
-      message: 'Pleae provide licenses',
+      message: 'Please provide licenses',
       when: ({ confirmLicense }) => confirmLicense
     },
     {
@@ -78,7 +78,7 @@ const promptUser = () => {
     {
       type: 'input',
       name: 'contributing',
-      message: 'Pleae give a detailed list of guidelines for potential contributors to follow',
+      message: 'Please give a detailed list of guidelines for potential contributors to follow',
       when: ({ confirmContributing }) => confirmContributing
     },
     {
@@ -90,7 +90,7 @@ const promptUser = () => {
     {
       type: 'input',
       name: 'tests',
-      message: 'Pleae provide written tests for your application',
+      message: 'Please provide written tests for your application',
       when: ({ confirmTests }) => confirmTests
     },
     {
@@ -102,27 +102,30 @@ const promptUser = () => {
     {
       type: 'input',
       name: 'questions',
-      message: 'Pleae provide contact information for questions',
+      message: 'Please provide contact information for questions',
       when: ({ confirmQuestions }) => confirmQuestions
     },
     {
       type: 'confirm',
       name: 'confirmTableOfContents',
-      message: 'Would you like to impliment a table of contents?',
+      message: 'Would you like to implement a table of contents?',
       default: true
     }
   ])
 // TODO: Create a function to write README file
-fs.writeFile('./READEME.md', data, err => {
-    if (err) throw new Error(err);
+  .then(function(data) {
+    fs.writeFile(`./README.md`, JSON.stringify(data), err => {
+      if (err) throw new Error(err);
 
-    console.log('README created! Check out index.html in this directory to see it!');
+      console.log(`README created! Check out README.md in this directory to see it!`);
+  })
   });
 };
-/*
+
 // TODO: Create a function to initialize app
 function init() {
-  fs.readFile("./README.md", "utf8", function(error, log) {
+  promptUser()
+  .then(fs.readFile("./README.md", "utf8", function(error, log) {
 
     if (error) {
       return console.log(error);
@@ -130,9 +133,8 @@ function init() {
     
     console.log(log);
     
-    })
+    }))
 };
 
 // Function call to initialize app
 init();
-*/
