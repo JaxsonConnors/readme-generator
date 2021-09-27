@@ -83,7 +83,7 @@ const generateTableOfContents = () => {
     if (confirmQuestions === true) {
       return `* Questions(#Questions)`;
     }
-    
+
   } else {
     return '';
   }

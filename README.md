@@ -1,0 +1,1 @@
+{"title":"TEST","description":"testing1","installation":"testing2","usage":"testing3","confirmLicense":true,"license":"test4","confirmContributing":true,"contributing":"test5","confirmTests":true,"tests":"test6","confirmQuestions":true,"questions":"test7","confirmTableOfContents":true}

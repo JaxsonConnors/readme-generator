@@ -114,7 +114,7 @@ const promptUser = () => {
   ])
 // TODO: Create a function to write README file
   .then(function(data) {
-    fs.writeFile(`./README.md`, JSON.stringify(data), err => {
+    fs.writeFile(`./README.md`, generateMarkdown(data), err => {
       if (err) throw new Error(err);
 
       console.log(`README created! Check out README.md in this directory to see it!`);
@@ -122,19 +122,4 @@ const promptUser = () => {
   });
 };
 
-// TODO: Create a function to initialize app
-function init() {
-  promptUser()
-  .then(fs.readFile("./README.md", "utf8", function(error, log) {
-
-    if (error) {
-      return console.log(error);
-    }
-    
-    console.log(log);
-    
-    }))
-};
-
-// Function call to initialize app
-init();
+promptUser();
