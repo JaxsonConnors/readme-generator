@@ -1,131 +1,50 @@
-# **TEST**
+# **n**
   ___
 
   ### **Description**
   ___
-  TESTING
+  n
 
 
-  function (strings) {
-      for (var _len2 = arguments.length, expressions = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-        expressions[_key2 - 1] = arguments[_key2];
-      }
-
-      if (typeof strings === 'function') {
-        // if the first argument passed is a function, assume it is a template tag and return
-        // an intermediary tag that processes the template using the aforementioned tag, passing the
-        // result to our tag
-        return _this.interimTag.bind(_this, strings);
-      }
-
-      if (typeof strings === 'string') {
-        // if the first argument passed is a string, just transform it
-        return _this.transformEndResult(strings);
-      }
-
-      // else, return a transformed end result of processing the template with our tag
-      strings = strings.map(_this.transformString.bind(_this));
-      return _this.transformEndResult(strings.reduce(_this.processSubstitutions.bind(_this, expressions)));
-    }
+  ### **Table Of Contents**
+  ___
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [License](#License)
+  * [Contributing](#Contributing)
+  * [Tests](#Tests)
+  * [Questions](#Questions)
 
 
   ### **Installation**
   ___
-  Test1
+  n
 
 
   ### **Usage**
   ___
-  Test2
+  n
 
 
-  function (strings) {
-      for (var _len2 = arguments.length, expressions = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-        expressions[_key2 - 1] = arguments[_key2];
-      }
+  ### **License**
+  ___
 
-      if (typeof strings === 'function') {
-        // if the first argument passed is a function, assume it is a template tag and return
-        // an intermediary tag that processes the template using the aforementioned tag, passing the
-        // result to our tag
-        return _this.interimTag.bind(_this, strings);
-      }
-
-      if (typeof strings === 'string') {
-        // if the first argument passed is a string, just transform it
-        return _this.transformEndResult(strings);
-      }
-
-      // else, return a transformed end result of processing the template with our tag
-      strings = strings.map(_this.transformString.bind(_this));
-      return _this.transformEndResult(strings.reduce(_this.processSubstitutions.bind(_this, expressions)));
-    }
+  n
 
 
-  function (strings) {
-      for (var _len2 = arguments.length, expressions = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-        expressions[_key2 - 1] = arguments[_key2];
-      }
+  ### **Contributing**
+  ___
 
-      if (typeof strings === 'function') {
-        // if the first argument passed is a function, assume it is a template tag and return
-        // an intermediary tag that processes the template using the aforementioned tag, passing the
-        // result to our tag
-        return _this.interimTag.bind(_this, strings);
-      }
-
-      if (typeof strings === 'string') {
-        // if the first argument passed is a string, just transform it
-        return _this.transformEndResult(strings);
-      }
-
-      // else, return a transformed end result of processing the template with our tag
-      strings = strings.map(_this.transformString.bind(_this));
-      return _this.transformEndResult(strings.reduce(_this.processSubstitutions.bind(_this, expressions)));
-    }
+  n
 
 
-  function (strings) {
-      for (var _len2 = arguments.length, expressions = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-        expressions[_key2 - 1] = arguments[_key2];
-      }
+  ### **Tests**
+  ___
 
-      if (typeof strings === 'function') {
-        // if the first argument passed is a function, assume it is a template tag and return
-        // an intermediary tag that processes the template using the aforementioned tag, passing the
-        // result to our tag
-        return _this.interimTag.bind(_this, strings);
-      }
-
-      if (typeof strings === 'string') {
-        // if the first argument passed is a string, just transform it
-        return _this.transformEndResult(strings);
-      }
-
-      // else, return a transformed end result of processing the template with our tag
-      strings = strings.map(_this.transformString.bind(_this));
-      return _this.transformEndResult(strings.reduce(_this.processSubstitutions.bind(_this, expressions)));
-    }
+  n
 
 
-  function (strings) {
-      for (var _len2 = arguments.length, expressions = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-        expressions[_key2 - 1] = arguments[_key2];
-      }
-
-      if (typeof strings === 'function') {
-        // if the first argument passed is a function, assume it is a template tag and return
-        // an intermediary tag that processes the template using the aforementioned tag, passing the
-        // result to our tag
-        return _this.interimTag.bind(_this, strings);
-      }
-
-      if (typeof strings === 'string') {
-        // if the first argument passed is a string, just transform it
-        return _this.transformEndResult(strings);
-      }
-
-      // else, return a transformed end result of processing the template with our tag
-      strings = strings.map(_this.transformString.bind(_this));
-      return _this.transformEndResult(strings.reduce(_this.processSubstitutions.bind(_this, expressions)));
-    }
+  ### **Questions**
+  ___
+  n
+  n

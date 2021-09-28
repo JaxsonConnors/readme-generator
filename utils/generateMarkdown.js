@@ -11,85 +11,6 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-const generateLicense = licenseText => {
-  if (!licenseText) {
-    return '';
-  }
-
-  return `
-    ### **License**
-    ___
-    ${licenseText}
-  `;
-};
-
-const generateContributing = contributingText => {
-  if (!contributingText) {
-    return '';
-  }
-
-  return `
-    ### **Contributing**
-    ___
-    ${contributingText}
-  `;
-};
-
-const generateTests = testsText => {
-  if (!testsText) {
-    return '';
-  }
-
-  return `
-    ### **Tests**
-    ___
-    ${testsText}
-  `;
-};
-
-const generateQuestions = questionsText => {
-  if (!questionsText) {
-    return '';
-  }
-
-  return `
-    ### **Questions**
-    ___
-    ${questionsText}
-  `;
-};
-
-const generateTableOfContents = () => {
-  if (confirmTableOfContents === true) {
-
-    return `
-    ### **Table Of Contents**
-    ___
-    * Installation(#Installation)
-    * Usage(#Usage)
-    `;
-    if (confirmLicense === true) {
-      return `* License(#License)`;
-    }
-  
-    if (confirmContributing === true) {
-      return `* Contributing(#Contributing)`;
-    }
-  
-    if (confirmTests === true) {
-      return `* Tests(#Tests)`;
-    }
-  
-    if (confirmQuestions === true) {
-      return `* Questions(#Questions)`;
-    }
-
-  } else {
-    return '';
-  }
-
-};
-
 function generateMarkdown(data) {
   return `# **${data.title}**
   ___
@@ -99,7 +20,14 @@ function generateMarkdown(data) {
   ${data.description}
 
 
-  ${generateTableOfContents}
+  ### **Table Of Contents**
+  ___
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [License](#License)
+  * [Contributing](#Contributing)
+  * [Tests](#Tests)
+  * [Questions](#Questions)
 
 
   ### **Installation**
@@ -112,16 +40,28 @@ function generateMarkdown(data) {
   ${data.usage}
 
 
-  ${generateLicense(license)}
+  ### **License**
+  ___
+
+  ${data.license}
 
 
-  ${generateContributing(contributing)}
+  ### **Contributing**
+  ___
+
+  ${data.contributing}
 
 
-  ${generateTests(tests)}
+  ### **Tests**
+  ___
+
+  ${data.tests}
 
 
-  ${generateQuestions(questions)}
+  ### **Questions**
+  ___
+  ${data.github}
+  ${data.email}
 `;
 }
 
