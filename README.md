@@ -1,10 +1,10 @@
-# **TEST**
+# **README Generator**
   ___
-  ![badge](https://img.shields.io/badge/license-Mozilla-brightgreen)<br />
+  ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 
   ### **Description**
   ___
-  LOREM IPSUM
+  An application in Node.js that uses the inquirer npm and will have you filling in various criteria. The generator will then record your answers and insert them into your newly generated README markdown file.
 
 
   ### **Table Of Contents**
@@ -19,24 +19,24 @@
 
   ### **Installation**
   ___
-  Test1
+  Standard Github Cloning/Pulling. You will also need Node.js installed.
 
 
   ### **Usage**
   ___
-  Test2
+  Open the terminal and enter "node index.js" into the terminal then fill out the following questions and your README will be automatically generated.
 
 
   ### **License**
   ___
-  ![badge](https://img.shields.io/badge/license-Mozilla-brightgreen)
+  ![badge](https://img.shields.io/badge/license-MIT-brightgreen)
   <br />
-  This application is covered by the Mozilla license. 
+  This application is covered by the MIT license. 
 
 
   ### **Contributing**
   ___
-  Lorem Ipsum
+  No outside contributors for this project.
 
 
   ### **Contributors**
@@ -46,10 +46,9 @@
 
   ### **Tests**
   ___
-  Tests
+  -
 
 
   ### **Questions**
   ___
-  JaxsonConnors
-  no@gmail.com
+  JaxsonConnors | -
