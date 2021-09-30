@@ -58,18 +58,19 @@ const promptUser = () => {
       }
     },
     {
-      type: 'input',
-      name: 'license',
-      message: 'Please provide a license for your application',
-      validate: usageInput => {
-        if (usageInput) {
-          return true;
-        } else {
-          console.log('Please provide a license for your application!');
-          return false;
-        }
-      }
-    },
+      type: "list",
+      name: "license",
+      message: "Chose the appropriate license for this project: ",
+      choices: [
+          "Apache",
+          "Academic",
+          "GNU",
+          "ISC",
+          "MIT",
+          "Mozilla",
+          "Open"
+      ]
+  },
     {
       type: 'input',
       name: 'contributing',
@@ -79,6 +80,19 @@ const promptUser = () => {
           return true;
         } else {
           console.log('Please provide guidlines for potential contributors!');
+          return false;
+        }
+      }
+    },
+    {
+      type: 'input',
+      name: 'contributors',
+      message: 'Please provide a list of contributors',
+      validate: usageInput => {
+        if (usageInput) {
+          return true;
+        } else {
+          console.log('Please provide a list of contributors!');
           return false;
         }
       }
